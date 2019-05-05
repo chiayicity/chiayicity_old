@@ -1,0 +1,1 @@
+var tipuesearch = {"pages": [{'title': 'Chiayi', 'text': '開場白', 'tags': '', 'url': 'Chiayi.html'}]};
