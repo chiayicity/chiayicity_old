@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
         <head>
-        <title>Chiayi.city</title>
+        <title>Chiayicity</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
@@ -34,6 +34,9 @@
         <script src="tipuesearch_content.js"></script>
         <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
         <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 -->
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
         <script>
             /* original tipuesearch
             $(document).ready(function() {
@@ -52,41 +55,24 @@
         </script>
         
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
-
-<!-- for LaTeX equations 暫時不用
-<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
-<script type="text/javascript">
-init_mathjax = function() {
-    if (window.MathJax) {
-        // MathJax loaded
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-            },
-            displayAlign: 'left', // Change this to 'center' to center equations.
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}}
-            }
-        });
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
-}
-init_mathjax();
-</script>
--->
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,10 +83,15 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
-<div class='container'><nav>
+<div class='container-fluid'><nav>
         
     <div class="site-wrap">
 
@@ -116,14 +107,14 @@ init_mathjax();
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>Chiayi.city 電子書</h1>
+                <h1>Chiayi.city 點子書</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Chiayi.city 電子書</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Chiayi.city 點子書</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -136,7 +127,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='嘉義.html'>嘉義</a><li><a href='嘉義公園.html'>嘉義公園</a><li><a href='尿尿小童.html'>尿尿小童</a><li><a href='相簿.html'>相簿</a><li><a href='輸入法.html'>輸入法</a></li>
+                     <li class='has-children'><a href='嘉義.html'>嘉義</a><ul class='dropdown'><li><a href='嘉義公園.html'>嘉義公園</a><li><a href='尿尿小童.html'>尿尿小童</a><li><a href='相簿.html'>相簿</a></li></ul><li><a href='管家.html'>管家</a><li><a href='輸入法.html'>輸入法</a></li>
                       </ul>
                 </nav>
               </div>
@@ -148,16 +139,8 @@ init_mathjax();
           
         </header>
     <div id="tipue_search_content"> <a href='嘉義公園.html'>Next</a> >> 嘉義公園<br /><h1>嘉義</h1>
-<p>Chiayi digital-oriented tech city</p>
-<p>chiayi dot city</p>
-<p>chiayi.city</p>
-<p>嘉義數位導向科技城市</p>
-<p><img alt="" height="531" src="./../images/red_orchid_in_kitchen.jpg" width="800"/></p>
-<p>(廚房裡的兩株蘭花)</p>
-<p>Building Britain’s Digital Future: critical skills needed: <a href="https://learning-without-borders.com/digital-education/">https://learning-without-borders.com/digital-education/</a></p>
-<p><a href="https://education.gov.mt/en/digitaleducation/Documents/conference_magazine.pdf">https://education.gov.mt/en/digitaleducation/Documents/conference_magazine.pdf</a></p>
-<p><a href="https://www.indiatoday.in/education-today/featurephilia/story/digital-education-1027965-2017-08-08">https://www.indiatoday.in/education-today/featurephilia/story/digital-education-1027965-2017-08-08</a></p>
-<p><a href="./../downloads/The construction of the digital city.pdf">The construction of the digital city.pdf</a></p><br /> <a href='嘉義公園.html'>Next</a> >> 嘉義公園</div>
+<p><img caption="false" height="398" src="./../images/red_orchid_in_kitchen.jpg" width="600"/></p>
+<br /> <a href='嘉義公園.html'>Next</a> >> 嘉義公園</div>
         
     <!-- footer -->
       <div class="container">
@@ -198,5 +181,13 @@ init_mathjax();
                     </script>
             -->
             <script src="../cmsimde/static/chimper/js/main.js"></script>
-        </body></html>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
         
